@@ -7,7 +7,9 @@ void Arcade::run() {
 }
 
 void Arcade::showMenu() {
-	std::cout << "==================" << '\n' << endl;
-	std::cout << "N's Arcade" << '\n' << endl;
-	std::cout << "==================" << '\n\n' << endl;
+	system("clear");
+
+	std::cout << "==================\n";
+	std::cout << "N's Arcade\n";
+	std::cout << "==================\n\n";
 }

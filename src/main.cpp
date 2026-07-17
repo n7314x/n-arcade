@@ -1,7 +1,7 @@
 #include "../include/arcade.h"
 
 int main() {
-	Arcade arcade
+	Arcade arcade;
 	arcade.run();
 
 	return 0;
