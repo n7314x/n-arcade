@@ -1,4 +1,9 @@
+# this is the output file that we use for compiling and running
 n-arcade
 
+# just some other file types I added, even though I don't think they're needed
 *.out
 *.exe
+
+# in relation to future plans, won't be used for a while
+data/

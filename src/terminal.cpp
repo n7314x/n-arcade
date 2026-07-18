@@ -1,5 +1,4 @@
 #include "../include/terminal.h"
-
 #include <iostream>
 
 void terminalClear() {

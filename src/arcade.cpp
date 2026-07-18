@@ -22,7 +22,7 @@ void Arcade::mainMenu() {
 	std::cout << "2. Higher or lower\n";
 	std::cout << "3. Rock, paper, scissors\n\n";
 
-	std::cout << "What do you want to play?: ";
+	std::cout << "Pick a game to play: ";
 	std::cin >> choice;
 
 	switch (choice) {
@@ -43,5 +43,6 @@ void Arcade::mainMenu() {
 		}
 		default:
 			std::cout << "Invalid choice";
+			break;
 	}
 }
