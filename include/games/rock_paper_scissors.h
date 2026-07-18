@@ -1,6 +1,6 @@
 #pragma once
 
-class RockPlayerScissors {
+class RockPaperScissors {
 public:
 	void play();
 };

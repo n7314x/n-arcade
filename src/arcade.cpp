@@ -1,13 +1,23 @@
 #include "../include/arcade.h"
+#include "../include/games/guessing_game.h"
+#include "../include/games/higher_lower.h"
+#include "../include/games/rock_paper_scissors.h"
 
 #include <iostream>
 
 void Arcade::run() {
-	showMenu();
+	mainMenu();
 }
 
-void Arcade::mainMenu() {
+void terminalClear() {
 	std::cout << "\033[2J\033[H";
+	return;	
+}
+
+// this is the menu that is displayed when you run the program
+void Arcade::mainMenu() {
+	terminalClear();
+	int choice;
 
 	std::cout << "==================\n";
 	std::cout << "N's Arcade\n";
@@ -21,14 +31,22 @@ void Arcade::mainMenu() {
 	std::cin >> choice;
 
 	switch (choice) {
-		case 1:
-			std::cout << "Starting guessing game...";
+		case 1: {
+			GuessingGame game;
+			game.play();
 			break;
-		case 2:
-			std::cout << "Starting higher or lower...";
+		}
+		case 2: {
+			HigherLower game;
+			game.play();
 			break;
-		case 3:
-			std::cout << "Starting rock, paper, scissors...";
+		}
+		case 3: {
+			RockPaperScissors game;
+			game.play();
 			break;
+		}
+		default:
+			std::cout << "Invalid choice";
 	}
 }

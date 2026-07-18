@@ -3,4 +3,4 @@
 class GuessingGame {
 public:
 	void play();
-}
+};

@@ -2,6 +2,12 @@
 
 #include <iostream>
 
+void terminalClear() {
+	std::cout << "\033[2J\033[H";
+	return;	
+}
+
 void GuessingGame::play() {
-	std::cout << "Guessing game\n\n";
+	terminalClear();
+	std::cout << "Welcome to N's guessing game.\n\n";
 }
