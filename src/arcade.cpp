@@ -2,6 +2,7 @@
 #include "../include/games/guessing_game.h"
 #include "../include/games/higher_lower.h"
 #include "../include/games/rock_paper_scissors.h"
+#include "terminal.h"
 
 #include <iostream>
 
@@ -9,12 +10,6 @@ void Arcade::run() {
 	mainMenu();
 }
 
-void terminalClear() {
-	std::cout << "\033[2J\033[H";
-	return;	
-}
-
-// this is the menu that is displayed when you run the program
 void Arcade::mainMenu() {
 	terminalClear();
 	int choice;
