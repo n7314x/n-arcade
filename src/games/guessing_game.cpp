@@ -3,6 +3,13 @@
 
 #include <iostream>
 
+void startGame() {
+	terminalClear();
+
+	std::cout << "Welcome to N's guessing game. To play, simply guess numbers until you get the right one.\n\n";
+
+}
+
 void GuessingGame::play() {
 	terminalClear();
 	int choice;
@@ -24,9 +31,3 @@ void GuessingGame::play() {
 	}
 }
 
-void startGame() {
-	terminalClear();
-	int choice;
-
-	std::cout << "Welcome to N's guessing game. To play, simply guess numbers until you get the right one.\n\n";
-}

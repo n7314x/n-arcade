@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+void startGame() {
+	terminalClear();
+
+	std::cout << "Welcome to N's higher or lower game. To play, guess a number and I'll tell you \"higher\" or \"lower\".\n\n";
+}
+
 void RockPaperScissors::play() {
 	terminalClear();
 	int choice;
@@ -23,10 +29,3 @@ void RockPaperScissors::play() {
 		std::cout << "Invalid choice";
 	}
 } 
-
-void startGame() {
-	terminalClear();
-	int choice;
-
-	std::cout << "Welcome to rock, paper, scissors. It should be self-explanatory how to play.\n\n";
-}
