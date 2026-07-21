@@ -2,6 +2,7 @@
 #include "../include/games/guessing_game.h"
 #include "../include/games/higher_lower.h"
 #include "../include/games/rock_paper_scissors.h"
+
 #include "terminal.h"
 
 #include <iostream>
@@ -11,38 +12,40 @@ void Arcade::run() {
 }
 
 void Arcade::mainMenu() {
-	terminalClear();
-	int choice;
+	while(true) {
+		terminalClear();
+		int choice;
 
-	std::cout << "==================\n";
-	std::cout << "N's Arcade\n";
-	std::cout << "==================\n\n";
+		std::cout << "==================\n";
+		std::cout << "N's Arcade\n";
+		std::cout << "==================\n\n";
 
-	std::cout << "1. Guessing game\n";
-	std::cout << "2. Higher or lower\n";
-	std::cout << "3. Rock, paper, scissors\n\n";
+		std::cout << "1. Guessing game\n";
+		std::cout << "2. Higher or lower\n";
+		std::cout << "3. Rock, paper, scissors\n\n";
 
-	std::cout << "Pick a game to play: ";
-	std::cin >> choice;
+		std::cout << "Pick a game to play: ";
+		std::cin >> choice;
 
-	switch (choice) {
-		case 1: {
-			GuessingGame game;
-			game.play();
-			break;
+		switch (choice) {
+			case 1: {
+				GuessingGame game;
+				game.play();
+				break;
+			}
+			case 2: {
+				HigherLower game;
+				game.play();
+				break;
+			}
+			case 3: {
+				RockPaperScissors game;
+				game.play();
+				break;
+			}
+			default:
+				std::cout << "Invalid choice";
+				break;
 		}
-		case 2: {
-			HigherLower game;
-			game.play();
-			break;
-		}
-		case 3: {
-			RockPaperScissors game;
-			game.play();
-			break;
-		}
-		default:
-			std::cout << "Invalid choice";
-			break;
 	}
 }

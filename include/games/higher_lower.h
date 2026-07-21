@@ -3,5 +3,7 @@
 class HigherLower {
 public:
 	void play();
+private:
+	void startGame();
 };
 

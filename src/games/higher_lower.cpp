@@ -3,9 +3,7 @@
 
 #include <iostream>
 
-void startGame() {
-	terminalClear();
-
+void HigherLower::startGame() {
 	std::cout << "Welcome to N's higher or lower game. To play, guess a number and I'll tell you \"higher\" or \"lower\".\n\n";
 }
 

@@ -3,11 +3,12 @@
 
 #include <iostream>
 
-void startGame() {
+void GuessingGame::startGame() {
 	terminalClear();
 
 	std::cout << "Welcome to N's guessing game. To play, simply guess numbers until you get the right one.\n\n";
-
+	
+	std::cout << "Enter a number: ";
 }
 
 void GuessingGame::play() {
